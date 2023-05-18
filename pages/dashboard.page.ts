@@ -8,6 +8,7 @@ export class homepage {
     readonly optionComponent2: Locator;
     readonly optionComponent3: Locator;
     readonly optionComponent4: Locator;
+    readonly optionComponent5: Locator;
     readonly dropdown2_Preposition: Locator;
     readonly button_Submit: Locator;
     readonly checkbox_SelectAll: Locator;
@@ -15,6 +16,7 @@ export class homepage {
     readonly checkbox_option2: Locator;
     readonly dropdown3_module: Locator;
     readonly optionModule1: Locator;
+    readonly optionModule2: Locator;
     readonly column_left: Locator;
     readonly column_right: Locator;
     readonly column_right_jenkinsdata: Locator
@@ -32,6 +34,7 @@ export class homepage {
         this.dropdown2_Preposition = page.locator('.mat-mdc-form-field-infix.ng-tns-c8-2')
         this.dropdown3_module=page.locator('.mat-mdc-form-field-infix.ng-tns-c8-4')
         this.optionModule1=page.getByText('Profiles')
+        this.optionModule2=page.getByText('OAuth')
         this.button_Submit=page.getByText('Submit')
         this.checkbox_SelectAll = page.locator('#mat-mdc-checkbox-1')
         this.checkbox_option1 = page.getByText('Nbcu',{exact:false})
@@ -44,6 +47,7 @@ export class homepage {
         this.optionComponent2=page.getByText('persona')
         this.optionComponent3=page.getByText('IMS')
         this.optionComponent4=page.getByText('cybertron')
+        this.optionComponent5=page.getByText('rango')
         this.integrationEnvHover=page.getByRole('button', { name: 'Integration Environment' })
         this.extEnvhover=page.getByRole('button', { name: 'Extended Environment' }).first()
         this.identityEnvHover=page.getByRole('button', { name: 'Identity Environment' })
@@ -72,6 +76,10 @@ export class homepage {
 
     async click_Componentoption4() {
         await this.optionComponent4.click()
+    }
+
+    async click_Componentoption5() {
+        await this.optionComponent5.click()
     }
 
     async click_dropdownPreposition() {
@@ -151,4 +159,7 @@ export class homepage {
         await this.optionModule1.click()
     }
 
+    async click_moduleoption2(){
+        await this.optionModule2.click()
+    }
 }
